@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Kids: Learn with Fun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .game {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .quiz {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Kids: Learn with Fun</h1>
+        <p>यह गेम बच्चों को हिंदी और अंग्रेजी सीखने में मदद करता है।</p>
+
+        <div class="game">
+            <div class="quiz">
+                <h3>Quiz: 1 + 1 = ?</h3>
+                <button onclick="checkAnswer('2')">2</button>
+                <button onclick="checkAnswer('3')">3</button>
+                <button onclick="checkAnswer('4')">4</button>
+                <button onclick="checkAnswer('5')">5</button>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            const resultElement = document.getElementById('result');
+            
+            if (answer === '2') {
+                resultElement.textContent = "सही उत्तर!";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "गलत उत्तर! सही उत्तर है 2";
+                resultElement.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
